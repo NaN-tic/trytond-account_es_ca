@@ -11,11 +11,9 @@ if os.path.isdir(DIR):
     sys.path.insert(0, os.path.dirname(DIR))
 
 import unittest
-import datetime
 import trytond.tests.test_tryton
-from trytond.tests.test_tryton import POOL, DB_NAME, USER, CONTEXT, test_view,\
-    test_depends
-from trytond.transaction import Transaction
+from trytond.tests.test_tryton import test_view, test_depends
+
 
 class AccountEsCaTestCase(unittest.TestCase):
     '''
@@ -40,10 +38,6 @@ class AccountEsCaTestCase(unittest.TestCase):
 
 def suite():
     suite = trytond.tests.test_tryton.suite()
-    from trytond.modules.company.tests import test_company
-    for test in test_company.suite():
-        if test not in suite:
-            suite.addTest(test)
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(
         AccountEsCaTestCase))
     return suite
