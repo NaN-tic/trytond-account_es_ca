@@ -7,3 +7,4 @@ include LICENSE
 include tryton.cfg
 include *.xml
 include *.csv
+include locale/*.po

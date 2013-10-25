@@ -1,0 +1,32 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:chart.of.account.es.ca.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "model:chart.of.account.es.ca.start,name:"
+msgid "Chart of Account Spanish to Catalan"
+msgstr "Plantilla compte comptable espanyol al català"
+
+msgctxt "model:ir.action,name:translate_accounts_action_wizard"
+msgid "Translate Accounts from Spanish to Catalan"
+msgstr "Traducció comptes comptables del espanyol al català"
+
+msgctxt "view:chart.of.account.es.ca.start:"
+msgid "Translate Accounts from Spanish to Catalan"
+msgstr "Tradueix comptes comptables del espanyol al català"
+
+msgctxt "view:chart.of.account.es.ca.start:"
+msgid ""
+"You can now translate your Spanish chart of account and taxes to Catalan."
+msgstr "Ara pot traduir el comptes i impostos del espanyol al català."
+
+msgctxt "wizard_button:chart.of.account.es.ca,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:chart.of.account.es.ca,start,translate:"
+msgid "Translate"
+msgstr "Tradueix"

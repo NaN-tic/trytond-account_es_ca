@@ -40,7 +40,7 @@ setup(name='trytond_account_es_ca',
     ],
     package_data={
         'trytond.modules.account_es_ca': info.get('xml', [])
-            + ['tryton.cfg'],
+            + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
