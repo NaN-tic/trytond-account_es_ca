@@ -1,7 +1,6 @@
 #This file is part of account_es_ca module for Tryton.
 #The COPYRIGHT file at the top level of this repository contains
 #the full copyright notices and license terms.
-
 from trytond.model import ModelView
 from trytond.pool import Pool
 from trytond.transaction import Transaction
@@ -13,7 +12,7 @@ import os
 __all__ = [
     'ChartOfAccountEs2CaStart',
     'ChartOfAccountEs2Ca',
-]
+    ]
 
 
 def get_csv_reader(file_name):
@@ -21,8 +20,9 @@ def get_csv_reader(file_name):
         reader = csv.reader(open(file_name, 'rU'), delimiter=str(','),
                             quotechar=str('"'))
     except:
+        logger = logging.getLogger(__name__)
         message = 'Error reading file %s' % file_name
-        logging.getLogger('AccountEsCa').error(message)
+        logger.error(message)
         return []
     return reader
 
