@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part of country_zip_es module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form string="Translate Accounts from Spanish to Catalan">
+    <image name="tryton-dialog-information" xexpand="0"
+        xfill="0"/>
+    <label string="You can now translate your Spanish chart of account and taxes to Catalan." 
+        id="translate_account_chart_es_ca"
+        yalign="0.0" xalign="0.0" xexpand="1"/>
+    <newline/>
+</form>
