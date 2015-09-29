@@ -9,11 +9,7 @@ import logging
 import csv
 import os
 
-__all__ = [
-    'ChartOfAccountEs2CaStart',
-    'ChartOfAccountEs2Ca',
-    ]
-
+__all__ = ['ChartOfAccountEs2CaStart', 'ChartOfAccountEs2Ca']
 
 def get_csv_reader(file_name):
     try:
@@ -49,7 +45,7 @@ class ChartOfAccountEs2Ca(Wizard):
     translate = StateTransition()
 
     def transition_translate(self):
-        Module = Pool().get('ir.module.module')
+        Module = Pool().get('ir.module')
         modules = Module.search([
                 ('name', 'in', ('account_es', 'account_es_pyme')),
                 ('state', '=', 'installed'),
@@ -77,7 +73,7 @@ class ChartOfAccountEs2Ca(Wizard):
             wizard = Wizard.search([
                 ('wiz_name', '=', 'chart.of.account.es.ca')
                 ])[0]
-            ConfigWizard = Pool().get('ir.module.module.config_wizard.item')
+            ConfigWizard = Pool().get('ir.module.config_wizard.item')
             config_wizard = ConfigWizard.search([('action', '=', wizard.id)])
             ConfigWizard.write(config_wizard, {'state': 'open'})
         return 'end'
