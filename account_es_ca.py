@@ -46,6 +46,7 @@ class ChartOfAccountEs2Ca(Wizard):
 
     def transition_translate(self):
         Module = Pool().get('ir.module')
+
         modules = Module.search([
                 ('name', 'in', ('account_es', 'account_es_pyme')),
                 ('state', '=', 'installed'),
@@ -68,12 +69,4 @@ class ChartOfAccountEs2Ca(Wizard):
                         for row in reader:
                             fields = Module.search([('name', '=', row[0])])
                             Module.write(fields, {'name': row[1]})
-        else:
-            Wizard = Pool().get('ir.action.wizard')
-            wizard = Wizard.search([
-                ('wiz_name', '=', 'chart.of.account.es.ca')
-                ])[0]
-            ConfigWizard = Pool().get('ir.module.config_wizard.item')
-            config_wizard = ConfigWizard.search([('action', '=', wizard.id)])
-            ConfigWizard.write(config_wizard, {'state': 'open'})
         return 'end'
